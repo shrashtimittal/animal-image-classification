@@ -1,0 +1,20 @@
+dataset:
+  # replace the path below with your dataset folder absolute path (use double backslashes or forward slashes)
+  path: "E:/Internships and courses/Unified Mentor ML Intern/animal_classification/Animal Classification/dataset"
+  img_size: 224
+  num_classes: 15
+
+model:
+  name: "efficientnet_b0"
+  pretrained: true
+
+training:
+  batch_size: 32
+  epochs: 30
+  learning_rate: 0.001
+  freeze_epochs: 3     # train head only for these many epochs, then unfreeze
+  fine_tune_lr: 1e-4   # LR to use when fine-tuning whole model
+
+paths:
+  outputs: "E:/animal_classification/outputs"
+  models: "E:/animal_classification/models"

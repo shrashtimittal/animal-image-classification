@@ -1,0 +1,17 @@
+# Basic ML / image libs
+numpy
+pandas
+matplotlib
+scikit-learn
+tqdm
+Pillow
+opencv-python
+pyyaml
+jupyterlab
+tensorboard
+timm
+
+# NOTE: install torch separately using the official selector (below)
+# torch
+# torchvision
+# torchaudio
