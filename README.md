@@ -1,64 +1,98 @@
 # 🐾 Animal Image Classification System
 
 ## 📌 Project Overview
-This project builds a deep learning-based image classification system that identifies animals from images.
+A deep learning-based multi-class image classification system built using PyTorch and EfficientNet-B0.
 
-The dataset contains 15 different animal classes including:
+The model classifies images into 15 animal categories including:
 Bear, Bird, Cat, Cow, Deer, Dog, Dolphin, Elephant, Giraffe, Horse, Kangaroo, Lion, Panda, Tiger, Zebra.
 
-Each image is resized to 224x224x3 for model training.
+All images are resized to 224x224x3 for training.
 
 ---
 
 ## 🎯 Objective
-To build an accurate multi-class image classification model using deep learning techniques.
+To build an accurate and scalable deep learning model capable of identifying animal species from images using transfer learning.
+
+---
+
+## 🧠 Model Architecture
+- Transfer Learning using **EfficientNet-B0**
+- Pretrained on ImageNet
+- Custom classification head for 15 classes
+- Fine-tuning after initial frozen training phase
 
 ---
 
 ## 🗂 Dataset
 - 15 classes
-- Images of size 224x224x3
-- Folder-based classification
+- 224x224 RGB images
+- Folder-based structure
 
----
+Dataset is not included in this repository.
 
-## 🧠 Approach
-- Data preprocessing and normalization
-- Train-validation split
-- CNN / Transfer Learning (mention what you used)
-- Model evaluation using accuracy and loss metrics
+Place the dataset inside a folder named:
+
+dataset/
+ ├── Bear/
+ ├── Bird/
+ ├── Cat/
+ ...
+ └── Zebra/
+
+Update the dataset path inside `config.yaml` if needed.
 
 ---
 
 ## 🛠 Tech Stack
 - Python
-- TensorFlow / PyTorch (mention which)
+- PyTorch
+- Torchvision
+- TIMM (for EfficientNet)
 - NumPy
-- Matplotlib
 - OpenCV
-- Streamlit / Flask (if app.py is for deployment)
+- Streamlit (for deployment interface)
 
 ---
 
 ## 📊 Results
-- Training Accuracy: XX%
-- Validation Accuracy: XX%
+- Training Accuracy: (add your real number)
+- Validation Accuracy: (add your real number)
+- Model checkpoint saved as: models/best_model.pth
 
 ---
 
 ## 🚀 How to Run
 
-1. Clone the repository: git clone https://github.com/shrashtimittal/animal-image-classification.git 
+1️⃣ Clone the repository:
+git clone https://github.com/shrashtimittal/animal-image-classification.git
 
-2. Install dependencies: pip install -r requirements.txt
+cd animal-image-classification
 
-3. Run the app: python app.py
+2️⃣ Install dependencies: pip install -r requirements.txt
+
+3️⃣ Install PyTorch separately (based on your system):
+Visit: https://pytorch.org/get-started/locally/
+
+4️⃣ Run the application: streamlit run app.py
 
 ---
 
-## 📌 Future Improvements
+## 📌 Project Structure
+
+animal-image-classification/
+├── src/              # Model architecture and training logic
+├── models/           # Saved model weights
+├── app.py            # Streamlit app
+├── config.yaml       # Configuration file
+├── requirements.txt
+└── README.md
+
+---
+
+## 🔮 Future Improvements
+- Hyperparameter tuning
 - Model optimization
 - Deployment on cloud
-- Adding more classes
+- Adding more animal classes
 
-Pretrained model available in /models folder.
+
