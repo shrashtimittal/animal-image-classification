@@ -1,6 +1,6 @@
 dataset:
   # replace the path below with your dataset folder absolute path (use double backslashes or forward slashes)
-  path: "E:/Internships and courses/Unified Mentor ML Intern/animal_classification/Animal Classification/dataset"
+  path: "E:/Internships and courses/..."
   img_size: 224
   num_classes: 15
 
@@ -17,4 +17,5 @@ training:
 
 paths:
   outputs: "E:/animal_classification/outputs"
+
   models: "E:/animal_classification/models"
